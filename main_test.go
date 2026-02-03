@@ -157,8 +157,20 @@ func TestDecodeEncodeJSONNode(t *testing.T) {
 	require.True(t, m.decodeJSONString())
 	require.Equal(t, jsonx.Object, args.Kind)
 	require.True(t, args.HasChildren())
+	require.NotNil(t, args.End)
+	require.Equal(t, args.Depth, args.End.Depth)
 	require.True(t, m.encodeJSONValue())
 	require.Equal(t, jsonx.String, args.Kind)
 	expected := `{"requestId":"id","content":"123"}`
 	require.Equal(t, strconv.Quote(expected), args.Value)
+}
+
+func TestDecodeJSONStringInvalidInputNoop(t *testing.T) {
+	m := newTestModelFromJSON(t, `{"clientIp":"10.156.175.39"}`)
+	ip := findChildByKey(m.top, "clientIp")
+	require.NotNil(t, ip)
+	m.selectNode(ip)
+	require.False(t, m.decodeJSONString())
+	require.Equal(t, jsonx.String, ip.Kind)
+	require.Equal(t, `"10.156.175.39"`, ip.Value)
 }

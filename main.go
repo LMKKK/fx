@@ -1397,6 +1397,9 @@ func (m *model) decodeJSONString() bool {
 	if err != nil {
 		return false
 	}
+	if !json.Valid([]byte(raw)) {
+		return false
+	}
 	parsed, err := Parse([]byte(raw))
 	if err != nil {
 		return false

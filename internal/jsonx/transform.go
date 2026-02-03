@@ -11,7 +11,7 @@ func ReplaceNode(target *Node, parsed *Node) {
 	}
 
 	comma := trailingComma(target)
-	depth := target.Depth
+	offset := int(target.Depth) - int(parsed.Depth)
 
 	// Remove any wrapped chunks on the target so Next points to the next sibling.
 	target.dropChunks()
@@ -69,7 +69,7 @@ func ReplaceNode(target *Node, parsed *Node) {
 	parsed.Next = nil
 	parsed.End = nil
 
-	reassignParentDepth(first, last, target, depth+1)
+	reassignParentDepth(first, last, target, offset)
 
 	last.Comma = comma
 }
@@ -195,17 +195,24 @@ func nextSibling(node *Node) *Node {
 	return node.Next
 }
 
-func reassignParentDepth(start *Node, end *Node, parent *Node, depth uint8) {
+func reassignParentDepth(start *Node, end *Node, parent *Node, offset int) {
 	if start == nil {
 		return
 	}
 	for node := start; node != nil; {
 		node.Parent = parent
-		node.Depth = depth
+		newDepth := int(node.Depth) + offset
+		if newDepth < 0 {
+			newDepth = 0
+		}
+		if newDepth > 255 {
+			newDepth = 255
+		}
+		node.Depth = uint8(newDepth)
 		var next *Node
 		if node.HasChildren() && node.End != nil {
-			child := node.Next
-			reassignParentDepth(child, node.End, node, depth+1)
+			childOffset := offset
+			reassignParentDepth(node.Next, node.End, node, childOffset)
 			next = node.End.Next
 		} else {
 			next = node.Next
