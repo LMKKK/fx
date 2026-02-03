@@ -3,7 +3,7 @@ package complete
 import (
 	"testing"
 
-	"github.com/antonmedv/fx/internal/jsonx"
+	"github.com/LMKKK/fx/internal/jsonx"
 )
 
 func TestKeysComplete(t *testing.T) {

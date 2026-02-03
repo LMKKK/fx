@@ -6,7 +6,7 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	. "github.com/antonmedv/fx/internal/jsonx"
+	. "github.com/LMKKK/fx/internal/jsonx"
 )
 
 // doSearch is a test helper that performs a synchronous search using executeSearch.

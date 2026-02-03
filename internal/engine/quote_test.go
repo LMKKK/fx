@@ -6,7 +6,7 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"github.com/antonmedv/fx/internal/engine"
+	"github.com/LMKKK/fx/internal/engine"
 )
 
 func TestQuote_BasicASCII(t *testing.T) {

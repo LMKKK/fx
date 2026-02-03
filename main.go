@@ -24,14 +24,14 @@ import (
 	"github.com/charmbracelet/lipgloss"
 	"github.com/mattn/go-isatty"
 
-	"github.com/antonmedv/fx/internal/complete"
-	"github.com/antonmedv/fx/internal/engine"
-	"github.com/antonmedv/fx/internal/fuzzy"
-	"github.com/antonmedv/fx/internal/jsonpath"
-	. "github.com/antonmedv/fx/internal/jsonx"
-	"github.com/antonmedv/fx/internal/theme"
-	"github.com/antonmedv/fx/internal/toml"
-	"github.com/antonmedv/fx/internal/utils"
+	"github.com/LMKKK/fx/internal/complete"
+	"github.com/LMKKK/fx/internal/engine"
+	"github.com/LMKKK/fx/internal/fuzzy"
+	"github.com/LMKKK/fx/internal/jsonpath"
+	. "github.com/LMKKK/fx/internal/jsonx"
+	"github.com/LMKKK/fx/internal/theme"
+	"github.com/LMKKK/fx/internal/toml"
+	"github.com/LMKKK/fx/internal/utils"
 )
 
 var (

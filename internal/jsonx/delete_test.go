@@ -5,7 +5,7 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	. "github.com/antonmedv/fx/internal/jsonx"
+	. "github.com/LMKKK/fx/internal/jsonx"
 )
 
 func TestDeleteNode_ObjectScenarios(t *testing.T) {

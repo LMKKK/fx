@@ -7,7 +7,7 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/antonmedv/fx/internal/jsonx"
+	"github.com/LMKKK/fx/internal/jsonx"
 )
 
 func TestJsonParser_Parse(t *testing.T) {

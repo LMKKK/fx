@@ -3,7 +3,7 @@ package jsonx
 import (
 	"strconv"
 
-	"github.com/antonmedv/fx/internal/jsonpath"
+	"github.com/LMKKK/fx/internal/jsonpath"
 )
 
 type Kind byte

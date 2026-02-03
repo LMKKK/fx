@@ -8,7 +8,7 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/antonmedv/fx/internal/engine"
+	"github.com/LMKKK/fx/internal/engine"
 )
 
 // setupVM creates a new goja runtime with stdlib loaded.

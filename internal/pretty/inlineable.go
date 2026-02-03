@@ -1,7 +1,7 @@
 package pretty
 
 import (
-	"github.com/antonmedv/fx/internal/jsonx"
+	"github.com/LMKKK/fx/internal/jsonx"
 )
 
 func isInlineable(n *jsonx.Node) bool {

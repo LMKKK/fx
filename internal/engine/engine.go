@@ -9,8 +9,8 @@ import (
 
 	"github.com/dop251/goja"
 
-	"github.com/antonmedv/fx/internal/jsonx"
-	"github.com/antonmedv/fx/internal/pretty"
+	"github.com/LMKKK/fx/internal/jsonx"
+	"github.com/LMKKK/fx/internal/pretty"
 )
 
 //go:embed stdlib.js

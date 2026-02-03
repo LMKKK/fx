@@ -13,8 +13,8 @@ import (
 
 	"github.com/goccy/go-yaml"
 
-	"github.com/antonmedv/fx/internal/jsonpath"
-	"github.com/antonmedv/fx/internal/jsonx"
+	"github.com/LMKKK/fx/internal/jsonpath"
+	"github.com/LMKKK/fx/internal/jsonx"
 )
 
 func lookup(names []string, defaultEditor string) string {

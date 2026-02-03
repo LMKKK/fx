@@ -8,7 +8,7 @@ import (
 
 	"github.com/dop251/goja"
 
-	"github.com/antonmedv/fx/internal/utils"
+	"github.com/LMKKK/fx/internal/utils"
 )
 
 func (n *Node) ToValue(vm *goja.Runtime) goja.Value {

@@ -5,7 +5,7 @@ import (
 
 	tea "github.com/charmbracelet/bubbletea"
 
-	. "github.com/antonmedv/fx/internal/jsonx"
+	. "github.com/LMKKK/fx/internal/jsonx"
 )
 
 func (m *model) doSearch(s string) tea.Cmd {
